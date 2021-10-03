@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(148, 148, 148);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(170, 39, 39);
+    border-radius: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/intro-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.intro p {
+    text-shadow: 3px 3px 5px black;
+    margin-bottom: 15rem;
+}
+
+.intro .btn_next {
+    cursor: pointer;
+    background-color: brown;
+    width: 250px;
+    height: 70px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.intro .btn_next:hover {
+    background-color: rgb(139, 29, 29);
+}
+
+.home {
+    display: none;
+}
+
+.body-container {
+    height: 100vh;
+}
+
+.body-bg {
+    background-image: url("../images/body-bg.jpg");
+    background-size: cover;
+    height: 100%;
+}
+
+.main-body {
+    background-color: rgb(228, 228, 228);
+    height: 100%;
+}
+
+.main-body .logo {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.main-body .formContainer {
+    min-height: 25vh;
+    width: 75%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 991.98px) {
+    .body-bg {
+        display: none;
+    }
+    .main-body {
+        background-image: url("../images/body-bg-2.png");
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+    .main-body .formContainer {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+}
+form p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+form label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+.head {
+    font-family: monospace;
+    font-size: 22px;
+    font-weight: 400;
+    color: #800000;
+}
+#display{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+    color: #e108b5;
+}
+#btn{
+    background-color: cadetblue;
+    color:white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 16px;
+}

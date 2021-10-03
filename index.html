@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadvir</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="tabar icon" href="../images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="intro text-center">
+        <p class="text-white display-1">CALCULATE COVID-19</p>
+        <button class="btn btn_next fs-4 rounded-3" onclick="nextPage()">CALCULATE</button>
+    </div>
+    <div class="home">
+        <div class="row g-0 body-container">
+            <div class="col-lg-5 body-bg"></div>
+            <div class="col-12 col-lg-7 main-body">
+                <div class="d-flex align-items-center justify-content-center flex-column h-100 p-4 p-lg-5">
+                    <img src="images/logo.png" class="logo" alt="">
+                    <div class="formContainer mt-5 overflow-auto text-center">
+                    <form action="" class="">
+                        <p for="age">Age (19 - 100)</p>
+                        <input type="text" id="age" placeholder="Enter your age">
+                        <br>
+                        <p for="age">Biological Sex</p>
+                        <input type="radio" name="biological_sex" id="biological_sex_male">
+                        <label for="biological_sex_male">Male</label>
+                        <br>
+                        <input type="radio" name="biological_sex" id="biological_sex_female">
+                        <label for="biological_sex_female">Female</label>
+                        <br>
+                        <p class = "head">Body Mass Index (BMI)</p>
+                        <p for="height">Height (cm)</p>
+                        <br>
+                        <label>Height range should be from 140 to 210</label>
+                        <br>
+                        <input type="text" id="height" placeholder="Enter your height">
+                        <br>
+                        <p for="weight">Weight (kg)</p>
+                        <br>
+                        <label>Weight range should be from 40 to 180</label>
+                        <br>
+                        <input type="text" id="weight" placeholder="Enter your weight">
+                        <br><br>
+                        <p class = "head">Clinical Information</p>
+                        <p>Diabetes?</p>
+                        <input type="radio" name="diabetes" id="diabetes_yes_t1">
+                        <label for="diabetes_yes_t1">Yes, Type 1</label>
+                        <br>
+                        <input type="radio" name="diabetes" id="diabetes_yes_t2">
+                        <label for="diabetes_yes_t2">Yes, Type 2</label>
+                        <br>
+                        <input type="radio" name="diabetes" id="diabetes_none">
+                        <label for="diabetes_none">None</label>
+                        <p>Chronic kidney disease (CKD)?</p>
+                        <input type="radio" name="kidney_disease" id="kidney_disease_none">
+                        <label for="kidney_disease_none">No serious kidney disease</label>
+                        <br>
+                        <input type="radio" name="kidney_disease" id="kidney_disease_CKD3">
+                        <label for="kidney_disease_CKD3">CKD3</label>
+                        <br>
+                        <input type="radio" name="kidney_disease" id="kidney_disease_CKD4">
+                        <label for="kidney_disease_CKD4">CKD4</label>
+                        <br>
+                        <input type="radio" name="kidney_disease" id="kidney_disease__nodtCDK5">
+                        <label for="kidney_disease_CDK5_nodt">CDK5 without dialysis or transplant</label>
+                        <br>
+                        <input type="radio" name="kidney_disease" id="kidney_disease_CDK5_d">
+                        <label for="kidney_disease_CDK5_d">CDK5 with dialysis in the last 12 months</label>
+                        <br>
+                        <input type="radio" name="kidney_disease" id="kidney_disease_CDK5_t">
+                        <label for="kidney_disease_CDK5_t">CDK5 with transplant</label>
+                        <br>
+                        <p>Sickle cell disease or severe combine immunodeficiency syndrome?</p>
+                        <input type="radio" name="sickle_cell" id="sickle_cell_yes">
+                        <label for="sickle_cell_yes">Yes</label>
+                        <br>
+                        <input type="radio" name="sickle_cell" id="sickle_cell_no">
+                        <label for="sickle_cell_no">No</label>
+                        <br>
+                        <p>Learning disability?</p>
+                        <input type="radio" name="learning_disability" id="learning_disability_yes_down">
+                        <label for="learning_disability_yes_down">Yes, Downs Syndrome</label>
+                        <br>
+                        <input type="radio" name="learning_disability" id="learning_disability_yes">
+                        <label for="learning_disability_yes">Yes, Learning disability excluding Downs Syndrome</label>
+                        <br>
+                        <input type="radio" name="learning_disability" id="learning_disability_none">
+                        <label for="learning_disability_none">None</label>
+                        <br>
+                        <p>Cancer treatments and immunosuppressants?</p>
+                        <select name="cancer_treatments" id="cancer_treatments">
+                            <option value="no_chemotherapy">No Chemotherapy in the 12 months</option>
+                            <option value="chemotherapy_group_a">Group A</option>
+                            <option value="chemotherapy_group_b">Group B</option>
+                            <option value="chemotherapy_group_c">Group C</option>
+                        </select>
+                        <br>
+                        <input type="checkbox" name="cancer_treatments_chkboxes" id="cancer_treatments_chkbox1">
+                        <label for="cancer_treatments_chkbox1">Had radiotherapy in the last six months</label>
+                        <br>
+                        <input type="checkbox" name="cancer_treatments_chkboxes" id="cancer_treatments_chkbox2">
+                        <label for="cancer_treatments_chkbox2">Currently have cancer of the blood or bone marrow such as leukaemia, myelodysplastic syndromes, lymphoma or myeloma and are at any stage of treatment</label>
+                        <br>
+                        <input type="checkbox" name="cancer_treatments_chkboxes" id="cancer_treatments_chkbox3">
+                        <label for="cancer_treatments_chkbox3">Had a bone marrow transplant in the last 6 months</label>
+                        <br>
+                        <input type="checkbox" name="cancer_treatments_chkboxes" id="cancer_treatments_chkbox4">
+                        <label for="cancer_treatments_chkbox4">Had a solid organ transplant(e.g lung, liver, stomach, pancreas, spleen, heart or thymus)</label>
+                        <br>
+                        <input type="checkbox" name="cancer_treatments_chkboxes" id="cancer_treatments_chkbox5">
+                        <label for="cancer_treatments_chkbox5">Been prescribed immunosuppressants by a GP in the last six months</label>
+                        <br>
+                        <input type="checkbox" name="cancer_treatments_chkboxes" id="cancer_treatments_chkbox6">
+                        <label for="cancer_treatments_chkbox6">Prescribed oral steroids by a GP in the last 6 months</label>
+                        <br>
+                        <input type="checkbox" name="cancer_treatments_chkboxes" id="cancer_treatments_chkbox6">
+                        <label for="cancer_treatments_chkbox6">Have a lung or oral cancer</label>
+                        <br>
+                        <p>Severe respiratory or lung problems?</p>
+                        <input type="checkbox" name="respiratory_or_lung_problems_chkboxes" id="respiratory_or_lung_problems_chkbox1">
+                        <label for="respiratory_or_lung_problems_chkbox1">Have asthma</label>
+                        <br>
+                        <input type="checkbox" name="respiratory_or_lung_problems_chkboxes" id="respiratory_or_lung_problems_chkbox2">
+                        <label for="respiratory_or_lung_problems_chkbox2">Currently taking anti-leukotrienes or a long-acting beta2-agonist (LABA)</label>
+                        <br>
+                        <input type="checkbox" name="respiratory_or_lung_problems_chkboxes" id="respiratory_or_lung_problems_chkbox3">
+                        <label for="respiratory_or_lung_problems_chkbox3">Have cystic fibrosis or bronchiectasis or alveolitis</label>
+                        <br>
+                        <input type="checkbox" name="respiratory_or_lung_problems_chkboxes" id="respiratory_or_lung_problems_chkbox4">
+                        <label for="respiratory_or_lung_problems_chkbox4">Have pulmonary hypertension or pulmonary fibrosis</label>
+                        <br>
+                        <input type="checkbox" name="respiratory_or_lung_problems_chkboxes" id="respiratory_or_lung_problems_chkbox5">
+                        <label for="respiratory_or_lung_problems_chkbox5">Have chronic obstructive pulmonary disease (COPD)</label>
+                        <br>
+                        <p>Neurological problems?</p>
+                        <input type="checkbox" name="neurological_problems_chkboxes" id="neurological_problems_chkbox1">
+                        <label for="neurological_problems_chkbox1">Have Parkinson's disease</label>
+                        <br>
+                        <input type="checkbox" name="neurological_problems_chkboxes" id="neurological_problems_chkbox2">
+                        <label for="neurological_problems_chkbox2">Have epilepsy</label>
+                        <br>
+                        <input type="checkbox" name="neurological_problems_chkboxes" id="neurological_problems_chkbox3">
+                        <label for="neurological_problems_chkbox3">Have dementia</label>
+                        <br>
+                        <input type="checkbox" name="neurological_problems_chkboxes" id="neurological_problems_chkbox4">
+                        <label for="neurological_problems_chkbox4">Have motor neurone disease, multiple sclerosis, myaesthenia, or Huntington's Chorea</label>
+                        <br>
+                        <input type="checkbox" name="neurological_problems_chkboxes" id="neurological_problems_chkbox5">
+                        <label for="neurological_problems_chkbox5">Have cerebral palsy</label>
+                        <br>
+                        <p>Heart or circulation problems?</p>
+                        <input type="checkbox" name="heart_problems_chkboxes" id="heart_problems_chkbox1">
+                        <label for="heart_problems_chkbox1">Have a congenital heart problem</label>
+                        <br>
+                        <input type="checkbox" name="heart_problems_chkboxes" id="heart_problems_chkbox2">
+                        <label for="heart_problems_chkbox2">Have coronary heart disease</label>
+                        <br>
+                        <input type="checkbox" name="heart_problems_chkboxes" id="heart_problems_chkbox3">
+                        <label for="heart_problems_chkbox3">Had a stroke or TIA</label>
+                        <br>
+                        <input type="checkbox" name="heart_problems_chkboxes" id="heart_problems_chkbox4">
+                        <label for="heart_problems_chkbox4">Have atrial fibrillation</label>
+                        <br>
+                        <input type="checkbox" name="heart_problems_chkboxes" id="heart_problems_chkbox5">
+                        <label for="heart_problems_chkbox5">Have heart failure</label>
+                        <br>
+                        <input type="checkbox" name="heart_problems_chkboxes" id="heart_problems_chkbox6">
+                        <label for="heart_problems_chkbox6">Have peripheral vascular disease</label>
+                        <br>
+                        <input type="checkbox" name="heart_problems_chkboxes" id="heart_problems_chkbox7">
+                        <label for="heart_problems_chkbox7">Had a thrombosis or pulmonary embolus</label>
+                        <br>
+                        <p>Other conditions?</p>
+                        <input type="checkbox" name="other_conditions_chkboxes" id="other_conditions_chkbox1">
+                        <label for="other_conditions_chkbox1">Have severe mental illness</label>
+                        <br>
+                        <input type="checkbox" name="other_conditions_chkboxes" id="other_conditions_chkbox2">
+                        <label for="other_conditions_chkbox2">Have cirrhosis of the liver</label>
+                        <br>
+                        <input type="checkbox" name="other_conditions_chkboxes" id="other_conditions_chkbox3">
+                        <label for="other_conditions_chkbox3">Have rheumatoid arthritis or SLE</label>
+                        <br>
+                        <input type="checkbox" name="other_conditions_chkboxes" id="other_conditions_chkbox4">
+                        <label for="other_conditions_chkbox4">Had a prior fracture of hip, wrist, spine or humerus</label>
+                        <br>
+                    </form>
+                    <div class="container">
+                        <button id="btn" class="btn">Calculate</button>
+                        <p id="display"></p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
